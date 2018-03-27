@@ -18,8 +18,8 @@ ENV OVERRIDE="${DEFAULT:+8094}"
 ADD run.sh .
 
 # expose range, env and regular port
-# exp   8080     8081    8083 8084  8085     8087       8090      8091      8092      8092     8093      8094
-EXPOSE "$PORT" 8081-8082 8083 "$X" $RANGE $RECURSIVE $ARG_PORT ${BRACES} "${LINE2}" $OVERLAP $DEFAULT $OVERRIDE
+# exp   8080     8081    8083 8084  8085     8087       8090      8091      8092      8092     8093      8094   warn and ignore
+EXPOSE "$PORT" 8081-8082 8083 "$X" $RANGE $RECURSIVE $ARG_PORT ${BRACES} "${LINE2}" $OVERLAP $DEFAULT $OVERRIDE GARBAGE
 
 # shouldn't take into account in previous EXPOSE
 # env $PORT should evaluate to 8080 there
