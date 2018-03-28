@@ -15,12 +15,15 @@ ENV OVERLAP=8092-8095
 ENV DEFAULT="${MISSING:-8093}"
 ENV OVERRIDE="${DEFAULT:+8094}"
 ENV MISSING_OVERRIDE="${MISSING:+8094}"
+ENV PORT_P 8100
+ENV RANGE_P 8101-8105
+ENV PROTO udp
 
 ADD run.sh .
 
 # expose range, env and regular port
-# exp   8080     8081    8083 8084  8085     8087       8090      8091      8092      8092     8093      8094   warn and ignore for both
-EXPOSE "$PORT" 8081-8082 8083 "$X" $RANGE $RECURSIVE $ARG_PORT ${BRACES} "${LINE2}" $OVERLAP $DEFAULT $OVERRIDE $MISSING_OVERRIDE GARBAGE
+# exp   8080     8081    8083 8084  8085     8087       8090      8091      8092      8092     8093      8094   warn and ignore for both     8100/udp           8101/udp
+EXPOSE "$PORT" 8081-8082 8083 "$X" $RANGE $RECURSIVE $ARG_PORT ${BRACES} "${LINE2}" $OVERLAP $DEFAULT $OVERRIDE $MISSING_OVERRIDE GARBAGE ${PORT_P}/${PROTO} ${RANGE_P}/udp
 
 # shouldn't take into account in previous EXPOSE
 # env $PORT should evaluate to 8080 there
