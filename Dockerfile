@@ -3,7 +3,7 @@ FROM openshift/base-centos7
 # https://docs.docker.com/engine/reference/builder/#env
 # https://docs.docker.com/engine/reference/builder/#environment-replacement
 ENV LINE=8092
-ENV LINE=8093 LINE2="${LINE}"
+ENV LINE2="${LINE}"
 
 ADD run.sh .
 
