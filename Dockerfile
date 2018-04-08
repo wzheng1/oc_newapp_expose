@@ -2,7 +2,7 @@ FROM ubuntu
 
 # https://docs.docker.com/engine/reference/builder/#env
 # https://docs.docker.com/engine/reference/builder/#environment-replacement
-ARG CONT_IMG_VER 8080
+ARG CONT_IMG_VER=8080
 ENV CONT_IMG_VER $CONT_IMG_VER
 
 
