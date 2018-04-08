@@ -2,8 +2,8 @@ FROM ubuntu
 
 # https://docs.docker.com/engine/reference/builder/#env
 # https://docs.docker.com/engine/reference/builder/#environment-replacement
-ARG CONT_IMG_VER=hello
-#ENV CONT_IMG_VER hello
+#ARG CONT_IMG_VER=hello
+ENV CONT_IMG_VER hello
 
 
 ADD run.sh .
