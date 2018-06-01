@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM openshift/base-centos7
 
 # https://docs.docker.com/engine/reference/builder/#env
 # https://docs.docker.com/engine/reference/builder/#environment-replacement
