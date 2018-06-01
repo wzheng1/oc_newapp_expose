@@ -5,10 +5,7 @@ FROM ubuntu
 
 ADD run.sh .
 
-FROM centos
-ENV port=8080
-EXPOSE $port
-ENV port=8081
-EXPOSE $port
+ARG ARG_PORT
+EXPOSE $ARG_PORT
 
 ENTRYPOINT ["./run.sh"]
