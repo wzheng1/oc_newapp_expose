@@ -2,7 +2,7 @@ FROM openshift/base-centos7
 
 # https://docs.docker.com/engine/reference/builder/#env
 # https://docs.docker.com/engine/reference/builder/#environment-replacement
-ENV X=8084 RANGE=8084-8086
+ENV X=8004 X=8005
 
 ADD run.sh .
 
