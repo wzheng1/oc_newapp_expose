@@ -4,7 +4,7 @@ FROM openshift/base-centos7
 # https://docs.docker.com/engine/reference/builder/#environment-replacement
 ARG ARG_PORT=8004
 ARG ARG_PORT2=8004
-EXPOSE $ARG_PORT $ARG_PORT223
+EXPOSE 66666666666666666666
 
 ADD run.sh .
 
